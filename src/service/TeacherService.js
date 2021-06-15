@@ -3,8 +3,8 @@ import axios from 'axios';
 // const TEACHER_API_BASE_URL = "http://localhost:8080/teacher";
 // const STUDENT_API_BASE_URL = "http://localhost:8080/student";
 
-const TEACHER_API_BASE_URL = "teacher";
-const STUDENT_API_BASE_URL = "student";
+const TEACHER_API_BASE_URL = "/teacher";
+const STUDENT_API_BASE_URL = "/student";
 
 
 class TeacherService {

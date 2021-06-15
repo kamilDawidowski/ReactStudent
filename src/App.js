@@ -16,6 +16,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import TeacherAddPost from "./components/Forms/TeacherAddPost";
 import TeacherAddStudent from "./components/Forms/TeacherAddStudent";
+import 'react-app-polyfill/stable'
+
 
 class App extends Component {
 
