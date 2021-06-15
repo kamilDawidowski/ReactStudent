@@ -1,0 +1,43 @@
+.pasek-position
+{
+    float: left;
+    color: #ffffff;
+    text-align: right;
+    background-color: #676464;
+
+}
+.data-position
+{
+    float: left;
+    color: #ffffff;
+    text-align: right;
+    background-color: #676464;
+}
+.post-color
+{
+    background-color: #242222;
+}
+.post-font
+{
+    color: white;
+}
+.icon-school
+{
+    color: rgb(59, 91, 152);
+    font-size: 80px;
+}
+.update-color{
+    background-color: #1aa057;
+}
+.position{
+    float: left;
+    width: 10%;
+}
+.post-text
+{
+    text-align: center;
+}
+.btn-margin
+{
+    margin:10px;
+}
