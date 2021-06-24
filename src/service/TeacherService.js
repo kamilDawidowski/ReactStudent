@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const TEACHER_API_BASE_URL = "/teacher";
-const STUDENT_API_BASE_URL = "/student";
+const TEACHER_API_BASE_URL = "https://spring-app-student.herokuapp.com/teacher";
+const STUDENT_API_BASE_URL = "https://spring-app-student.herokuapp.com/student";
 //
 // const TEACHER_API_BASE_URL = "https://springarudent.herokuapp.com/teacher";
 // const STUDENT_API_BASE_URL = "https://springarudent.herokuapp.com/student";
