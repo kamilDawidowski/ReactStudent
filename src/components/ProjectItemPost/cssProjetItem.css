@@ -15,7 +15,7 @@
 }
 .post-color
 {
-    background-color: #242222;
+    background-color: #542d7c;
 }
 .post-font
 {
@@ -40,4 +40,20 @@
 .btn-margin
 {
     margin:10px;
+}
+.btn-back
+{
+    background-color: #8a00ff;
+    animation-name: example;
+    animation-duration: 6s;
+}
+.btn-back:hover
+{
+    background-color: #811580;
+}
+@keyframes example {
+    0%   {background-color: #323a53;}
+    25%  {background-color: #33447a;}
+    50%  {background-color: #2246b8;}
+    100% {background-color: #0d40e0;}
 }

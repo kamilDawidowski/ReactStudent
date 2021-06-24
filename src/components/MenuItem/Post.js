@@ -4,7 +4,7 @@ import ProjectItem from "../ProjectItemPost/ProjectItem";
 class Post extends Component {
     render() {
         return (
-            <div>
+            <div className='container'>
                 <ProjectItem/>
             </div>
         );

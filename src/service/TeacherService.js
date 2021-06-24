@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-// const TEACHER_API_BASE_URL = "http://localhost:8080/teacher";
-// const STUDENT_API_BASE_URL = "http://localhost:8080/student";
-
-const TEACHER_API_BASE_URL = "https://springarudent.herokuapp.com/teacher";
-const STUDENT_API_BASE_URL = "https://springarudent.herokuapp.com/student";
+const TEACHER_API_BASE_URL = "http://localhost:8080/teacher";
+const STUDENT_API_BASE_URL = "http://localhost:8080/student";
+//
+// const TEACHER_API_BASE_URL = "https://springarudent.herokuapp.com/teacher";
+// const STUDENT_API_BASE_URL = "https://springarudent.herokuapp.com/student";
 
 
 class TeacherService {

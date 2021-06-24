@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import './css/cssTeacher.css';
-import { ToastContainer, toast } from 'react-toastify';
+import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+
 class Teacher extends Component {
 
     // Pobieranie danych
@@ -37,32 +39,30 @@ class Teacher extends Component {
         });
     }
 
-    updateTeacher(id){
-        var url='/updateTeacher/';
-        var url2=url.toString()+id.toString();
+    updateTeacher(id) {
+        var url = '/updateTeacher/';
+        var url2 = url.toString() + id.toString();
         this.props.history.push(url2);
         // this.props.history.push('/updateTeacher/&{id}');
     }
 
-    addPostByTeacher(id){
-        var url='/addPostByTeacher/';
-        var url3=url.toString()+id.toString();
+    addPostByTeacher(id) {
+        var url = '/addPostByTeacher/';
+        var url3 = url.toString() + id.toString();
         this.props.history.push(url3);
         // this.props.history.push('/updateTeacher/&{id}');
     }
 
-    addStudentByTeacher(id){
-        var url='/addStudentByTeacher/';
-        var url3=url.toString()+id.toString();
+    addStudentByTeacher(id) {
+        var url = '/addStudentByTeacher/';
+        var url3 = url.toString() + id.toString();
         this.props.history.push(url3);
         // this.props.history.push('/updateTeacher/&{id}');
     }
-
-
-
 
 
     render() {
+
         if (this.state.loading) {
             return <div>loading ...</div>
         }
@@ -72,53 +72,107 @@ class Teacher extends Component {
         }
 
         return (
-            <div>
-                {/*Tabela wyswietlajaca nauczycieli*/}
-                <br></br>
-                <h2 className="h2 title">Lista nauczycieli</h2>
-                <br></br>
-                <table className="table table-primary table-striped">
-                    <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col"><i className="fas fa-user-graduate"> Imię</i></th>
-                        <th scope="col"><i className="far fa-envelope"> Email</i></th>
-                        <th scope="col"><i className="fas fa-wrench"> Akcja</i></th>
-                    </tr>
-                    </thead>
-                    <tbody>
+            <div className="container-fluid">
 
-                    {
-                        this.state.teachers.map((teachers) => {
-                            return <>
-
-                                <tr>
-                                    <th scope="row">{teachers.id}</th>
-                                    <td>{teachers.name}</td>
-                                    <td>  {teachers.email}</td>
-                                    <td>
-                                        <div className="btn-group" role="group"
-                                             aria-label="Basic mixed styles example">
-                                            <button type="button" className="btn btn-danger btn-margin" onClick={() => this.remove(teachers.id)}>Usuń</button>
-                                            <ToastContainer />
-                                            <a className="btn btn-success btn-margin"  role="button " onClick={()=>this.updateTeacher(teachers.id)}>Aktulizuj</a>
-
-                                            <button type="button" className="btn btn-info btn-margin"onClick={()=>this.addPostByTeacher(teachers.id)} > Dodaj Post</button>
-                                            <button type="button" className="btn btn-dark btn-margin"onClick={()=>this.addStudentByTeacher(teachers.id)} > Dodaj Studenta</button>
-
-                                        </div>
-                                    </td>
-
-                                </tr>
+                {
+                    this.state.teachers.map((teachers) => {
+                        return <>
+                            <div className="card-group">
 
 
-                            </>
-                        })
-                    }
-                    </tbody>
-                </table>
+                                    <div className="card">
+                                        <div className="card-body">
+                                            <div className='row'>
+                                                <div className="col">
+                                            <h5 className="card-title text">{teachers.name}</h5>
+                                            <p className="card-text"><i
+                                                className="far fa-envelope"> {teachers.email}</i></p>
+                                            <p className="card-text"><small className="text-muted">Numer identyfikacyjny
+                                                : {teachers.id}</small>
+                                            </p>
+                                                </div>
+                                                    <div className="col">
+                                                        <div className="btn-group" role="group"
+                                                             aria-label="Basic mixed styles example">
+                                                            <button type="button" className="btn btn-danger  "
+                                                                    onClick={() => this.remove(teachers.id)}>Usuń
+                                                            </button>
+                                                            <ToastContainer/>
+
+                                                            <button className="btn btn-success " role="button "
+                                                                    onClick={() => this.updateTeacher(teachers.id)}>Aktulizuj</button>
+
+                                                            <button type="button" className="btn btn-info  "
+                                                                    onClick={() => this.addPostByTeacher(teachers.id)}> Dodaj Post
+                                                            </button>
+
+                                                            <button type="button" className="btn btn-dark  "
+                                                                    onClick={() => this.addStudentByTeacher(teachers.id)}> Dodaj Studenta
+                                                            </button>
+
+                                                        </div>
+                                                    </div>
+
+                                    </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </>
+                    })
+                }
                 <a className="btn btn-primary" href="/addTeacher" role="button">Dodaj Nauczyciela</a>
                 {/*Koniec tabeli*/}
+                {/*<h2 className="h2 title">Lista nauczycieli</h2>*/}
+                {/*    <table className="table table-success table-striped  table-hover">*/}
+                {/*        <thead>*/}
+
+                {/*        <tr>*/}
+                {/*            <th scope="col">ID</th>*/}
+                {/*            <th scope="col"><i className="fas fa-user-graduate"> Imię</i></th>*/}
+                {/*            <th scope="col"><i className="far fa-envelope"> Email</i></th>*/}
+                {/*            <th scope="col"><i className="fas fa-wrench"> Akcja</i></th>*/}
+                {/*        </tr>*/}
+
+                {/*        </thead>*/}
+                {/*        <tbody>*/}
+                {/*        {*/}
+                {/*        this.state.teachers.map((teachers) => {*/}
+                {/*            return <>*/}
+
+                {/*                <tr>*/}
+                {/*                    <th scope="row">{teachers.id}</th>*/}
+                {/*                    <td>{teachers.name}</td>*/}
+                {/*                    <td>{teachers.email}</td>*/}
+                {/*                    <td>*/}
+                {/*                        <div className="btn-group" role="group"*/}
+                {/*                             aria-label="Basic mixed styles example">*/}
+                {/*                            <button type="button" className="btn btn-danger  "*/}
+                {/*                                    onClick={() => this.remove(teachers.id)}>Usuń*/}
+                {/*                            </button>*/}
+                {/*                            <ToastContainer/>*/}
+
+                {/*                            <button className="btn btn-success " role="button "*/}
+                {/*                                    onClick={() => this.updateTeacher(teachers.id)}>Aktulizuj</button>*/}
+
+                {/*                            <button type="button" className="btn btn-info  "*/}
+                {/*                                    onClick={() => this.addPostByTeacher(teachers.id)}> Dodaj Post*/}
+                {/*                            </button>*/}
+
+                {/*                            <button type="button" className="btn btn-dark  "*/}
+                {/*                                    onClick={() => this.addStudentByTeacher(teachers.id)}> Dodaj Studenta*/}
+                {/*                            </button>*/}
+
+                {/*                        </div>*/}
+                {/*                    </td>*/}
+                {/*                </tr>*/}
+
+                {/*            </>*/}
+                {/*        })*/}
+                {/*        }*/}
+                {/*        </tbody>*/}
+                {/*    </table>*/}
+
             </div>
         );
     }

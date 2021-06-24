@@ -60,9 +60,9 @@ class ProjectItem extends Component {
                                         <i className="fas fa-school icon-school"></i>
                                     </div>
                                     <div className="col-lg-6 col-md-4 col-8">
-                                        <h3>POST</h3>
-                                        <i className="fas fa-user-graduate"> </i>
-                                        <p>ID: {posts.postId} </p>
+                                        <h3>Post nr {posts.postId}</h3>
+                                        <i className="fas fa-user-graduate"> Nauczyciel publikujący: {posts.name} </i>
+
                                     </div>
 
                                     <div className="pasek-position">
@@ -77,7 +77,7 @@ class ProjectItem extends Component {
                                             <div className="col-4">
 
 
-                                                <button type="button" className="btn btn-danger btn-lg btn-margin" onClick={() => this.remove(posts.postId)}>Usuń Post
+                                                <button type="button" className="btn  btn-lg btn-margin btn-back" onClick={() => this.remove(posts.postId)}>Usuń Post
                                                 </button>
                                                 <ToastContainer/>
 
@@ -99,7 +99,6 @@ class ProjectItem extends Component {
                                 </div>
 
 
-                                {/*    Dane posta*/}
 
 
                             </div>

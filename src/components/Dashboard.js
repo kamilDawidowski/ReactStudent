@@ -13,6 +13,12 @@ class Dashboard extends Component {
 
                 <div className="projects">
 
+                    <footer className='card-footer'>
+                        Autor: <address>Kamil Dawidowski (kuba27@poczta.onet.eu)</address>
+                        <p>Wszelkie prawa zastrzeżone</p>
+                    </footer>
+
+
                 </div>
 
         );

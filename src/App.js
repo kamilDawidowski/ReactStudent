@@ -2,21 +2,19 @@ import './App.css';
 import {Component} from "react";
 import React from 'react';
 import Dashboard from "./components/Dashboard";
-import {Navbar} from "reactstrap";
 import Header from "./components/Headers/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import Image from "./szko.png"
 import Teacher from "./components/MenuItem/Teacher";
 import Student from "./components/MenuItem/Student";
 import Post from "./components/MenuItem/Post";
 import TeacherAdd from "./components/Forms/TeacherAdd";
 import TeacherEdit from "./components/Forms/TeacherEdit";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import TeacherAddPost from "./components/Forms/TeacherAddPost";
 import TeacherAddStudent from "./components/Forms/TeacherAddStudent";
 import 'react-app-polyfill/stable'
+import Title from "./components/Title/Title";
 
 
 class App extends Component {
@@ -29,6 +27,7 @@ class App extends Component {
             <div className="App">
 
                 <Header/>
+                <Title/>
 
 
                     <BrowserRouter>
@@ -51,6 +50,7 @@ class App extends Component {
 
 
             </div>
+
 
         );
     }

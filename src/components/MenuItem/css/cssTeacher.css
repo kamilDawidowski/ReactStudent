@@ -1,13 +1,97 @@
-.email-icon
-{
-    color: orange;
+
+.title {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #ff0b5a;
+}
+
+.btn-margin:hover {
+    background-color: aqua;
+}
+
+body {
+    font-family: "Muli";
+}
+
+/*.text*/
+/*{*/
+/*   font-size: 2.5em;*/
+/*}*/
+.btn-success {
+    background-color: #7425cf;
+}
+
+.btn {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #ff0b5a;
+    border-radius: 0.6em;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 
 }
-.title
-{
-    text-align: center;
+
+.table-primary {
+    background-color: red;
 }
-.btn-margin
+
+#container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: yellow;
+}
+
+#animate {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+}
+
+.card-group {
+    margin: 20px;
+
+}
+.card{
+    background-color: rgba(123, 46, 202,0.2);
+}
+.text
 {
-    margin:10px;
+    animation-duration: 7s;
+    animation-name: titleAnimation;
+}
+@keyframes titleAnimation {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    75% {
+        font-size: 300%;
+        margin-left: 25%;
+        width: 150%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
